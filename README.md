@@ -47,9 +47,9 @@ spring-boot-starter-web 支持Web项目的开发，包含Tomcat和spring-mvc*
 #### 1. 快速搭建
 *注：spring boot 提供了一个项目生成工具，网址：http://start.spring.io*
 ##### 1. web项目搭建
->① 新建一个项目不添加任何依赖，mvn打jar包运行，看一下启动日志。说明入口main方法，@SpringBootApplication注解。 接着打开starter-boot包中查看spring.provides引入了spring-boot,spring-context,spring-beans
->② 新建一个项目添加starter-web，新建一个controller，运行演示。接着打开starter-web包中查看spring.provides引入了spring-webmvc,spring-web
->③ 在上一个web项目中演示加载自定义properties，映射到Model中
+> ① 新建一个项目不添加任何依赖，mvn打jar包运行，看一下启动日志。说明入口main方法，@SpringBootApplication注解。 接着打开starter-boot包中查看spring.provides引入了spring-boot,spring-context,spring-beans
+> ② 新建一个项目添加starter-web，新建一个controller，运行演示。接着打开starter-web包中查看spring.provides引入了spring-webmvc,spring-web
+> ③ 在上一个web项目中演示加载自定义properties，映射到Model中
 
 ##### 2. filter配置
 默认注册CharacterEncodingFilter（设置编码spring.http.encoding=UTF-8);配置一个filter需要在config class中使用`@ServletComponentScan(basePackages = "")`来加载已实现了Filter的类。实现Filter的类需要使用`@WebFilter`（servlet 3.0中添加的注解）来初始filter的属性
